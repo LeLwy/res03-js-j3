@@ -91,6 +91,96 @@ function getBrownEyedUsersExcludingCenturiaWorkers(users) {
     return count;
 }
 
+function countActiveBrownEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "brown" && user.isActive === true){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
+function countInactiveBrownEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "brown" && user.isActive === false){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
+function countActiveGreenEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "green" && user.isActive === true){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
+function countInactiveGreenEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "green" && user.isActive === false){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
+function countActiveBlueEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "blue" && user.isActive === true){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
+function countInactiveBlueEyedUsers(users){
+    
+    count= 0;
+    
+    for(user of users){
+        
+        if(user.eyeColor === "blue" && user.isActive === false){
+            
+            count ++;
+        }
+    }
+    
+    return count;
+}
+
 let users = [
     {
         id: 0,
@@ -276,8 +366,8 @@ console.log(`${getBrownEyedUsersExcludingCenturiaWorkers(users)} users with brow
 
 /***** ETAPE 6 *****/
 
-/*console.log(`Out of our brown eyed users ${} are active and ${} are inactive`);
+console.log(`Out of our brown eyed users ${countActiveBrownEyedUsers(users)} are active and ${countInactiveBrownEyedUsers(users)} are inactive`);
 
-console.log(`Out of our green eyed users ${} are active and ${} are inactive`);
+console.log(`Out of our green eyed users ${countActiveGreenEyedUsers(users)} are active and ${countInactiveGreenEyedUsers(users)} are inactive`);
 
-console.log(`Out of our blue eyed users ${} are active and ${} are inactive`);*/
+console.log(`Out of our blue eyed users ${countActiveBlueEyedUsers(users)} are active and ${countInactiveBlueEyedUsers(users)} are inactive`);
